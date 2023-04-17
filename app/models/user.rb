@@ -4,4 +4,12 @@ class User < ApplicationRecord
   has_many :follower_relationships, class_name: 'Relationship', foreign_key: 'followee_id', dependent: :destroy
   has_many :followees, through: :followee_relationships
   has_many :followers, through: :follower_relationships
+
+  def self.clocked_in_times
+    SleepRecord.select(:start_time).order(created_at: :desc)
+  end
+
+  def friends_sleep_records
+    SleepRecord.where(user_id: followees.pluck(:id)).where('end_time >= ?', 1.week.ago).order('end_time - start_time DESC')
+  end
 end

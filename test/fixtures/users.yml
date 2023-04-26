@@ -1,7 +1,12 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# user1:
+#   id: 1
+#   name: "User 1"
 
-one:
-  name: MyString
+# user2:
+#   id: 2
+#   name: "User 2"
 
-two:
-  name: MyString
+# user3:
+#   id: 3
+#   name: "User 3"

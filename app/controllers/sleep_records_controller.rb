@@ -13,7 +13,7 @@ class SleepRecordsController < ApplicationController
         render json: clocked_in_times
       end
     
-      def friends_records
+      def friends_records_sleep_records
         user = User.find(params[:user_id])
         friends_records = user.friends_sleep_records
         render json: friends_records

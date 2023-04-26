@@ -1,9 +1,14 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# relationship1:
+#   follower: user1
+#   followee: user2
+#   requires:
+#     - user1
+#     - user2
 
-one:
-  follower: one
-  followee: one
-
-two:
-  follower: two
-  followee: two
+# relationship2:
+#   follower: user1
+#   followee: user3
+#   requires:
+#     - user1
+#     - user3

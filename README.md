@@ -8,34 +8,17 @@ sample app for recording user's sleep pattern as well as getting sleep records o
 - as user i can see 1 week of friend's sleep record data
 - as user i can follow/add a friend 
 - as user i can unfollow/delete a friend 
+ 
  #### Routes pattern followed:
- --[ Route 1 ]-----------------------------------------------------------------------------------------------------------------------------------------
-    Prefix            | clock_in_times_sleep_records
-    Verb              | GET
-    URI               | /sleep_records/clock_in_times(.:format)
-    Controller#Action | sleep_records#clock_in_times
-    --[ Route 2 ]-----------------------------------------------------------------------------------------------------------------------------------------
-    Prefix            |
-    Verb              | GET
-    URI               | /sleep_records/friends_records_sleep_records/:user_id(.:format)
-    Controller#Action | sleep_records#friends_records_sleep_records
-    --[ Route 3 ]-----------------------------------------------------------------------------------------------------------------------------------------
-    Prefix            | sleep_records
-    Verb              | POST
-    URI               | /sleep_records(.:format)
-    Controller#Action | sleep_records#create
-    --[ Route 4 ]-----------------------------------------------------------------------------------------------------------------------------------------
-    Prefix            | relationships
-    Verb              | POST
-    URI               | /relationships(.:format)
-    Controller#Action | relationships#create
-    --[ Route 5 ]-----------------------------------------------------------------------------------------------------------------------------------------
-    Prefix            | relationship
-    Verb              | DELETE
-    URI               | /relationships/:id(.:format)
-    Controller#Action | relationships#destroy
+ | url routes | prefix | verb | URI | Controller#Action|
+| ----------- | ----------- |----------- |----------- |----------- |
+| [ Route 1 ] | clock_in_times_sleep_records | GET | /sleep_records/clock_in_times(.:format) | sleep_records#clock_in_times |
+| [ Route 2 ] |  | GET | /sleep_records/friends_records_sleep_records/:user_id(.:format) | sleep_records#friends_records_sleep_records |
+| [ Route 3 ] | sleep_records | POST | /sleep_records(.:format) | sleep_records#create |
+| [ Route 4 ] | relationships | POST | /relationships(.:format) | relationships#create |
+| [ Route 5 ] | relationship | DELETE | /relationships/:id(.:format) | relationships#destroy | 
 
-> **_NOTE:_** routes pattern was generated using the command :
+> **_NOTE:_** This is the tabularized version of routes pattern for the current api, original routes pattern was generated using the command :
 `rails routes --expanded`
 
 ### Completed List(previous todo list)

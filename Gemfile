@@ -41,6 +41,9 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "faker"
   gem "database_cleaner"
+  #gem 'webpacker', '6.0.0.rc.6'
+  gem "react-rails"
+  gem 'jsbundling-rails'
 end
 
 group :development do
